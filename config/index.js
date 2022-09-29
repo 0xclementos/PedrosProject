@@ -788,5 +788,5 @@ export const CONTRACT_ABI = [
   }
 ];
 
-export const CONTRACT_ADDRESS = "0x9432f6Be302934d732B98E7D42c2241F8632a510";
-export const GAS_LIMIT = 130341; //150000
+export const CONTRACT_ADDRESS = "0xdc5B2490ec4DEB08ad0Cc75fB90Fb1cb11dF5279";
+export const GAS_LIMIT = 150000;

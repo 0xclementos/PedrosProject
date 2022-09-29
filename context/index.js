@@ -16,8 +16,8 @@ export const AppProvider = ({ children }) => {
   const [mintPrice, setMintPrice] = useState(0);
   const [numOfNft, setNumOfNft] = useState(1);
   const [supply, setSupply] = useState(0);
-  const mainnetStr = "4" // 1
-  const mainnetId = "0x4" // 0x1
+  const mainnetStr = "1" // 1
+  const mainnetId = "0x1" // 0x1
 
   useEffect(() => {
     detectDeviceType();
@@ -165,6 +165,7 @@ export const AppProvider = ({ children }) => {
       // getContractData();
 
       const _contractProvider = contractProvider();
+       
       const newMintPrice = Number(numOfNft) * Number(mintPrice);
       const _parsedMintPrice = convertToBigNumber(newMintPrice);
 
@@ -176,7 +177,7 @@ export const AppProvider = ({ children }) => {
 
       await _contractProvider.mint(numOfNft, {
         value: _parsedMintPrice,
-        gasLimit: GAS_LIMIT,
+        gasLimit: GAS_LIMIT
       });
 
       // console.log(tx);
