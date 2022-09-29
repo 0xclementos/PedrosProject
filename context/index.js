@@ -33,7 +33,7 @@ export const AppProvider = ({ children }) => {
 
   const detectDeviceType = () => {
     if (typeof window.ethereum === "undefined") {
-      window.open("https://metamask.app.link/dapp/ordinarystrangers.com/");
+      window.open("https://metamask.app.link/dapp/thefinaljourney.xyz/");
       return;
     }
   };

@@ -46,14 +46,14 @@ const MintControls = () => {
             >
               {btnClicked ? (
                 <Image
-                  src="/assets/btn-clicked.gif"
+                  src="/assets/btn-animated.gif"
                   width="430"
                   height="230"
                   alt="Mint button"
                 />
               ) : (
                 <Image
-                  src="/assets/btn-animated.gif"
+                  src="/assets/btn-clicked.gif"
                   width="430"
                   height="230"
                   alt="Mint button"
