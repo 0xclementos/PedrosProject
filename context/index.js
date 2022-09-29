@@ -13,7 +13,7 @@ export const AppProvider = ({ children }) => {
   const [walletAddress, setWalletAddress] = useState("");
   const [btnClicked, setBtnClicked] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [mintPrice, setMintPrice] = useState(0);
+  const [mintPrice, setMintPrice] = useState(-1);
   const [numOfNft, setNumOfNft] = useState(1);
   const [supply, setSupply] = useState(0);
   const mainnetStr = "1" // 1
@@ -165,6 +165,8 @@ export const AppProvider = ({ children }) => {
       // getContractData();
 
       const _contractProvider = contractProvider();
+
+      console.log(mintPrice, 'mint-price')
        
       const newMintPrice = Number(numOfNft) * Number(mintPrice);
       const _parsedMintPrice = convertToBigNumber(newMintPrice);

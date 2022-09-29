@@ -11,6 +11,7 @@ const MintControls = () => {
     btnClicked,
     walletConnected,
     loading,
+    mintPrice
   } = useContext(AppContext);
 
   if (walletConnected)
@@ -20,7 +21,7 @@ const MintControls = () => {
           <h3>Loading...</h3>
         ) : (
           <div className="text-center flex flex-col items-center">
-            <h3 className="z-50">Quantity:</h3>
+            <h3 className="z-50 lg:text-2xl">Quantity:</h3>
             <div className="flex items-center mt-5 z-50 select-none">
               <div className={styles.caret} onClick={decreaseNumOfNft}>
                 <Image
@@ -30,7 +31,7 @@ const MintControls = () => {
                   alt="caret left"
                 />
               </div>
-              <h2 className="text-2xl mx-4">{numOfNft}</h2>
+              <h2 className="text-2 xl mx-4">{numOfNft}</h2>
               <div className={styles.caret} onClick={increaseNumOfNft}>
                 <Image
                   src="/assets/svg/caret-right.svg"
@@ -40,7 +41,8 @@ const MintControls = () => {
                 />
               </div>
             </div>
-            <div
+
+            { mintPrice > 0 && <div
               className="mint-btn -mt-10 lg:-mt-20 scale-150 cursor-pointer select-none"
               onClick={toggleBtnClick}
             >
@@ -59,7 +61,8 @@ const MintControls = () => {
                   alt="Mint button"
                 />
               )}
-            </div>
+            </div> }
+            
           </div>
         )}
       </>

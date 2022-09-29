@@ -18,9 +18,9 @@ export default function Home() {
       </Head>
       <Header />
       <main className="flex items-center justify-center flex-col h-screen w-screen p-10">
-        <h2 className="lg:text-4xl text-2xl mb-7 z-50 text-center leading-[2] lg:leading-[2]">
+        <h1 className="lg:text-6xl text-2xl mb-7 z-50 text-center leading-[2] lg:leading-[2]">
         Do You Want To Embark On The Final Journey?
-        </h2>
+        </h1>
         {walletConnected ? (
           <button className={styles.button}>{walletAddress}</button>
         ) : (
@@ -36,5 +36,5 @@ export default function Home() {
 }
 
 const styles = {
-  button: `border-none backdrop-blur-sm bg-[#ffffff49] text-[#fff] active:scale-90 transition text-[12px] p-3 py-2 rounded-md cursor-pointer select-none mb-10`,
+  button: `lg:text-2xl border-none backdrop-blur-sm bg-[#ffffff49] text-[#fff] active:scale-90 transition text-[12px] p-3 py-2 rounded-md cursor-pointer select-none mb-10`,
 };
