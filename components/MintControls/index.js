@@ -31,7 +31,7 @@ const MintControls = () => {
                   alt="caret left"
                 />
               </div>
-              <h2 className="text-2 xl mx-4">{numOfNft}</h2>
+              <h2 className="text-2 lg:text-2xl mx-4">{numOfNft}</h2>
               <div className={styles.caret} onClick={increaseNumOfNft}>
                 <Image
                   src="/assets/svg/caret-right.svg"
