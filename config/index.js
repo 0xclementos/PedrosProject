@@ -786,7 +786,7 @@ export const CONTRACT_ABI = [
     "stateMutability": "payable",
     "type": "function"
   }
-];
+]
 
 export const CONTRACT_ADDRESS = "0x64047628cc72335da76e7ba09686cddfbb9f5f33";
 export const GAS_LIMIT = 150000;
